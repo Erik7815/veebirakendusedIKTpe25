@@ -36,8 +36,8 @@ section#osa2 {
     margin: 5% 0 5% 0;
     width: 15%;
 }
-img{
-    width: 100%;
+img #erapilt{
+    width: 50%;
     border-radius: 50%;
     border: 5px solid goldenrod;
 }
@@ -83,9 +83,15 @@ section#osa4{
     margin: 5% 0 25% 0;
     width: 25%;
 }
-section#osa5{
+section#osa5 {
     padding: 5%;
     border: 5px double floralwhite;
     margin: 5% 0 5% 0;
     width: 25%;
+}
+#suurkast {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
