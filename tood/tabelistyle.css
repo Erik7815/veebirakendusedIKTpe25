@@ -58,3 +58,13 @@ table#keeruline td{
 #keeruline tr:nth-child(1) td:nth-child(1){
     background-color: greenyellow;
 }
+table#iseseisev{
+    border: 1px solid green;
+    width: 30%;
+    height: 200px;
+    border-collapse: collapse;
+}
+table#iseseisev td{
+    border: 1px solid green;
+    text-align: center;
+}
