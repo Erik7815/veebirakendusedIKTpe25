@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutad map area käsud</h1>
+<h2>palun kliki hiirega erineva alale pildil</h2>
+<img src="maja.png" alt="ilus majake" usemap="#majakaart">
+<!--kasutame map'i-->
+<map name="majakaart">
+    <!--ring -circle -->
+    <area shape="circle" coords="162,194,50" href="aken.html" alt="aken">
+    <!--ristkülik rect coords=x, y, x1, y2-->
+    <area shape="rect" coords="200, 16, 222, 81" href="korsten.html" alt="hall korsten">
+    <!--mitu nurga plügoon - ploy cords x,y, x2,y2, x3,y3-kolnurk-->
+    <area shape="rect" coords="78, 112, 163, 13, 238, 116" href="katus.html" alt="katus">
+</map>
+<div id="selgitus">
+    vajuta pildiala peale ja siia tuleb väike kirjeldus
+</div>
+
+</body>
+</html>
