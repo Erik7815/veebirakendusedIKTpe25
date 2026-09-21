@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Map area kasutamine</title>
+  <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutad map area käsud</h1>
+<h2>palun kliki hiirega erineva alale pildil</h2>
+<img src="maja.png" alt="ilus majake" usemap="#majakaart">
+<!--kasutame map'i-->
+<map name="majakaart">
+  <!--ring -circle -->
+  <area shape="circle" coords="121,170,30" href="aken.html" alt="aken">
+  <!--ristkülik rect coords=x, y, x1, y2-->
+  <area shape="rect" coords="200, 16, 222, 81" href="korsten.html" alt="hall korsten">
+  <!--mitu nurga plügoon - ploy cords x,y, x2,y2, x3,y3-kolnurk-->
+  <area shape="poly" coords="78, 112, 238, 116, 163, 13" href="katus.html" alt="katus">
+  <area shape="circle" coords="51, 38, 34" href="sun.html" alt="sun">
+  <area shape="rect" coords="180, 177, 240, 280" href="uks.html" alt="uks">
+  <area shape="circle" coords="71, 257, 38" href="korvits.html" alt="korvits">
+</map>
+<div id="selgitus">
+  <h2>Päike</h2>
+  Päike on heledaim Maalt nähtav täht, Päikesesüsteemi keskne keha.
+  Päike on inimese jaoks tähtsaim täht, kuna asub Maale kõige lähemal ning annab soojust ja valgust.
+  <br>
+  <a href="/index.html">Koduleht</a>
+</div>
+
+
+</body>
+</html>
