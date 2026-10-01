@@ -34,4 +34,27 @@ function muusikanumber(){
     vastus3.innerHTML="Sa kuulad muusikat " + tund.value + " tundi päevas";
     return tund.value;
 }
+function radiokuulamine(){
+let vastus4=document.getElementById("vastus4");
+let jah=document.getElementById("jah");
+let ei=document.getElementById("ei");
+
+    let radio = "";
+    if (jah.checked) {
+        radio = jah.value;
+    } else if (ei.checked) {
+        radio = ei.value;
+    }
+    vastus4.innerHTML = "Raadio kuulamine: " + radio;
+    vastus4.style.color = "green";
+
+    return radio.value;
+}
+function raadio(){
+    let vastus5=document.getElementById("vastus5");
+    let jaam=document.getElementById("jaam");
+
+    vastus5.innerHTML="Sinu nimetatud jaamad: " + jaam.value;
+    return jaam.value;
+}
 

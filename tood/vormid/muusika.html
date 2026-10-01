@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Muusika küsitlus</h1>
-<table>
+<table border="1">
 <tr>
   <td>
     <strong>Milliseid muusikuid/ansambleid sa tead?</strong>
@@ -45,6 +45,7 @@
   <tr>
     <td>
       <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
+
     </td>
     <td>
       <input type="number" min="0" max="24" step="1" value="6" id="tund" oninput="muusikanumber()">
@@ -55,8 +56,42 @@
   </tr>
   <tr>
     <td>
-      <input type="radio" name="jahei" value="jah" id=jah" onclick="">
-      <label for="jah">Jah</label>
+      <strong>Kas sa kuulad raadiot? </strong>
+    </td>
+    <td>
+
+      <br>
+      <input type="radio" name="jah" value="jah" id="jah" onclick="radiokuulamine()">
+      <label for="Jah">Jah</label>
+      <br>
+      <input type="radio" name="jah" value="ei" id="ei" onclick="radiokuulamine()">
+      <label for="ei">Ei</label>
+    </td>
+    <td>
+      <div id="vastus4"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Milliseid raadiojaamu oskad nimetada?</strong>
+      </td>
+    <td>
+      <input type="text" id="jaam" oninput="raadio()">
+    </td>
+    <td>
+      <div id="vastus5"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Millist muusikat sa kõige rohkem kuulad?</strong>
+    </td>
+    <td>
+      <input type="checkbox" id="" name="muusik" value="muusik1" onchange="muusikuvalik()">
+      <label for="muusik1">Male</label>
+    </td>
+    <td>
+      <div id="vastus6"></div>
     </td>
   </tr>
 

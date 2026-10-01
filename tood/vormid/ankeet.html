@@ -8,7 +8,7 @@
 <body>
 <h1>Sportlase ankeet</h1>
 <form action="#">
-    <table>
+    <table >
         <tr>
             <td>
                 <label for="nimi">Sisesta oma nimi</label>
@@ -81,13 +81,16 @@
                 <label for="klubi">Mis klubi sa külastad</label>
             </td>
             <td>
-                <select name="klubi" id="klubi">
+                <select name="klubi" id="klubi" onchange="klubiValik()">
                     <option value="vali">vali</option>
                     <option value="myfitness">MyFitness</option>
                     <option value="gym24">GYM24</option>
                     <option value="gym">GYM</option>
                     <option value="kalevspa">KalevSPA</option>
                 </select>
+            </td>
+            <td>
+                <div id="vastus5"></div>
             </td>
         </tr>
         <tr>
@@ -103,7 +106,21 @@
                 <label for="kuupaev">Millal oli su viimane trenn?</label>
             </td>
             <td>
-                <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31">
+                <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31" onchange="kuupaevValik()">
+            </td>
+            <td>
+                <div id="vastus6"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="kogemus">Millal oli su viimane trenn?</label>
+            </td>
+            <td>
+                <input type="range" id="kogemus" min="2026-01-01" max="2026-12-31" onchange="kuupaevValik()">
+            </td>
+            <td>
+                <div id="vastus7"></div>
             </td>
         </tr>
         <tr>

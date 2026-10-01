@@ -61,13 +61,41 @@ function sportValik(){
     vastus3.innerHTML=sport;
     return sport;
 }
+function  klubiVailik(){
+    let vastus5=document.getElementById("vastus5");
+    let klubiVailik=document.getElementById("klubi");
+
+    if(klubi.selected!==0){
+        vastus5.innerHTML="Valitud spordiklubi on:  "+klubi.value;
+        vastus5.style.color = "red";
+    }
+    return klubi.value;
+}
+function rangeValik(){
+let vastus7=document.getElementById("vastus7");
+let kogemus=document.getElementById("kogemus");
+
+vastus7.innerHTML="Sa valisid "+kogemus.value+"aastat ";
+    vastus7.style.color = "red";
+
+return vastus7.value;
+}
+function kuupaevValik(){
+    let vastus6=document.getElementById("vastus6");
+    let kuupaev=document.getElementById("kuupaev");
+
+    vastus6.innerHTML="Valitud külastud oli:  "+kuupaev.value;
+}
 function tervitus() {
     let nimi = nimiLugemine();
     let sugu = suguValik();
     let spordiala = sportValik();
+    let klubi = klubiValik();
     vastus4.innerHTML = 'sisestatud mimi on ' + nimi + '<br>'
         + 'Valitud sugu on ' + sugu + '<br>'
         + 'Valitud spordialad: ' + spordiala;
+    +'Valitud kuupaev: ' + kuupaev;
+    +'valitud klub: '+klubi;
     vastus4.style.backgroundColor = "yellow";
 }
 function puhasta(){
