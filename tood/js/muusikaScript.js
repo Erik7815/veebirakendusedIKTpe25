@@ -100,11 +100,11 @@ function puhasta(){
 function SAADA(){
     let vastus7=document.getElementById("vastus7");
 
-    vastus7.innerHTML= vastus1.innerHTML +
-    vastus2.innerHTML +
-    vastus3.innerHTML +
-    vastus4.innerHTML+
-    vastus5.innerHTML+
-    vastus6.innerHTML;
+    vastus7.innerHTML= vastus1.innerHTML + "<br>"+
+    vastus2.innerHTML + "<br>" +
+    vastus3.innerHTML + "<br>"+
+    vastus4.innerHTML+"<br>"+
+    vastus5.innerHTML+"<br>"+
+    vastus6.innerHTML;"<br>"+
 }
 
