@@ -68,20 +68,20 @@ let muusika6=document.getElementById("muusika6");
 
 let stiil="";
 if (muusika1.checked){
-    stiil=muusika1.value;
+    stiil+=muusika1.value;
 }if (muusika2.checked){
-    stiil=muusika2.value;
+    stiil+=muusika2.value;
 }if (muusika3.checked){
-    stiil=muusika3.value;
+    stiil+=muusika3.value;
 }if (muusika4.checked){
-    stiil=muusika4.value;
+    stiil+=muusika4.value;
 }if (muusika5.checked){
-    stiil=muusika5.value;
+    stiil+=muusika5.value;
 }if (muusika6.checked){
-    stiil=muusika6.value;
+    stiil+=muusika6.value;
 }
 if (stiil==""){
-        stiil="sul ei ole vastus"}
+        stiil="sul ei ole vastus";}
 
 vastus6.innerHTML= "Sinu vastus: " + stiil.value;
 vastus6.style.color = "green";
@@ -100,8 +100,8 @@ function puhasta(){
 function SAADA(){
     let vastus7=document.getElementById("vastus7");
 
-    vastus7.innerHTML= vastus1.innerHTML + "<br>"+
-    vastus2.innerHTML + "<br>" +
+    vastus7.innerHTML= vastus1.innerHTML + <br>+
+    vastus2.innerHTML + <br> +
     vastus3.innerHTML + "<br>"+
     vastus4.innerHTML+"<br>"+
     vastus5.innerHTML+"<br>"+
