@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <title>Muusika</title>
   <script src="../js/muusikaScript.js"></script>
+  <link rel="stylesheet" href="muusikastyle.css">
 </head>
 <body>
 <h1>Muusika küsitlus</h1>
 <table border="1">
+  <tr>
+    <td>
+       <strong>Küsimused</strong>
+    </td>
+    <td>
+     <strong>Vastused</strong>
+    </td>
+  </tr>
 <tr>
   <td>
-    <strong>Milliseid muusikuid/ansambleid sa tead?</strong>
+    Milliseid muusikuid/ansambleid sa tead?
 
   </td>
   <td>
     <fieldset>
 
-    <input type="checkbox" id="muusik1" name="muusik" value="muusik1" onchange="muusikuvalik()">
-    <label for="muusik1">Male</label>
+    <input type="checkbox" id="muusik1" name="muusik" value="Queen" onchange="muusikuvalik()">
+    <label for="muusik1">Queen</label>
       <br>
-      <input type="checkbox" id="muusik2" name="muusik" value="muusik2" onchange="muusikuvalik()">
-      <label for="muusik2">Female</label>
+      <input type="checkbox" id="muusik2" name="muusik" value="ACDC" onchange="muusikuvalik()">
+      <label for="muusik2">ACDC</label>
       <br>
-      <input type="checkbox" id="muusik3" name="muusik" value="muusik3" onchange="muusikuvalik()">
-      <label for="muusik3">Male</label>
+      <input type="checkbox" id="muusik3" name="muusik" value="the beatles" onchange="muusikuvalik()">
+      <label for="muusik3">the beatles</label>
 
     </fieldset>
   </td>
@@ -56,10 +65,9 @@
   </tr>
   <tr>
     <td>
-      <strong>Kas sa kuulad raadiot? </strong>
+      Kas sa kuulad raadiot?
     </td>
     <td>
-
       <br>
       <input type="radio" name="jah" value="jah" id="jah" onclick="radiokuulamine()">
       <label for="Jah">Jah</label>
@@ -73,7 +81,7 @@
   </tr>
   <tr>
     <td>
-      <strong>Milliseid raadiojaamu oskad nimetada?</strong>
+      Milliseid raadiojaamu oskad nimetada?
       </td>
     <td>
       <input type="text" id="jaam" oninput="raadio()">
@@ -84,14 +92,45 @@
   </tr>
   <tr>
     <td>
-      <strong>Millist muusikat sa kõige rohkem kuulad?</strong>
+      Millist muusikat sa kõige rohkem kuulad?
     </td>
     <td>
-      <input type="checkbox" id="" name="muusik" value="muusik1" onchange="muusikuvalik()">
-      <label for="muusik1">Male</label>
+      <input type="radio" id="muusika1" name="muusikastiil" value="Rock" onclick="stiilivalik()">
+      <label for="muusika1">Rock</label>
+    <br>
+      <input type="radio" id="muusika2" name="muusikastiil" value="Pop" onclick="stiilivalik()">
+      <label for="muusika2">Pop</label>
+      <br>
+      <input type="radio" id="muusika3" name="muusikastiil" value="Country" onclick="stiilivalik()">
+      <label for="muusika3">Country</label>
+      <br>
+      <input type="radio" id="muusika4" name="muusikastiil" value="Metal" onclick="stiilivalik()">
+      <label for="muusika4">Metal</label>
+      <br>
+      <input type="radio" id="muusika5" name="muusikastiil" value="Rap" onclick="stiilivalik()">
+      <label for="muusika5">Rap</label>
+      <br>
+      <input type="radio" id="muusika6" name="muusikastiil" value="Reggae" onclick="stiilivalik()">
+      <label for="muusika6">Reggae</label>
     </td>
     <td>
       <div id="vastus6"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Saada" onclick="SAADA()">
+    </td>
+    <td>
+      <strong>Kokkuvõte:</strong>
+    </td>
+    <td>
+      <div id="vastus7"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="reset" value="Puhasta" onclick="puhasta()">
     </td>
   </tr>
 

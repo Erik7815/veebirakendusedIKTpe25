@@ -1,0 +1,45 @@
+body {
+    font-family: Georgia, serif;
+    background-color: rgb(86, 167, 197);
+}
+table{
+    background-color: cornflowerblue;
+    border: 3px solid yellowgreen;
+border-radius: 10px;
+border-collapse: collapse;
+}
+input[type=radio]{
+    accent-color: yellowgreen;
+}
+input[type=checkbox]{
+    accent-color: yellowgreen;
+}
+input[type=text]{
+    accent-color: yellowgreen;
+}
+input[type=button]{
+    width:20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background-color: yellowgreen;
+    border-radius: 10px;
+
+}
+input[type=reset]{
+    width:20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background-color: yellowgreen;
+    border-radius: 10px;
+
+}
+label{
+    padding: 2px;
+    margin: 1%;
+    font-weight: bold;
+}
+input:hover{
+    background-color: lightgreen;
+    border: 2px yellowgreen;
+    border-radius: 10px;
+}
