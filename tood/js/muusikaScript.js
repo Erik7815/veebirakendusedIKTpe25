@@ -105,6 +105,6 @@ function SAADA(){
     vastus3.innerHTML + "<br>"+
     vastus4.innerHTML+"<br>"+
     vastus5.innerHTML+"<br>"+
-    vastus6.innerHTML;"<br>"+
+    vastus6.innerHTML + "<br>";
 }
 
