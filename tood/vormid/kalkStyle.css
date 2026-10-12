@@ -45,3 +45,16 @@ section#yld{
 img#tempilt{
     scale: 50%;
 }
+
+section#osa3 {
+    border: 1pt solid #000;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 30%;
+}
+section#osa4 {
+    border: 1pt solid #000;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 30%;
+}
