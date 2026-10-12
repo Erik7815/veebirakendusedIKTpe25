@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Saia kalkulaator</title>
     <script src="../js/saiakalkScript.js"></script>
+    <script src="../js/tempKalk.js"></script>
     <link rel="stylesheet" href="kalkStyle.css">
 
 </head>
 <body>
 <h1>Saia kalkulaatorid</h1>
+<section id="yld">
 <section id="osa1">
 <h2>Saia kalkulaator</h2>
 <label for="kogus">Kogus:</label>
@@ -26,5 +28,23 @@
 
 <div id="vastus"></div>
 </section>
+
+<section id="osa2">
+    <h2>Sisesta temperatuur</h2>
+    <input type="number" id="temp" min="-50" max="50" step="1" value="0"> &deg;
+    <br>
+
+    <input type="radio" name="tempValik" id="celsius" value="celsius" onchange="tempTeisendus()">
+    <label for="celsius"> &deg;C - celsius </label>
+    <br>
+    <input type="radio" name="tempValik" id="fahrenheit" value="fahrenheit" onchange="tempTeisendus()">
+    <label for="fahrenheit">&deg;F - fahrenheit </label>
+    <br>
+    <div id="vastus2"></div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrVAVd_HW_GMYNcL9w1rY52nJV4P3fnh_YGoqvo3_T2A&s=10" id="tempilt"></a>
+
+</section>
+</section>
+
 </body>
 </html>

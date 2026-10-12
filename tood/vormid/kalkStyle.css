@@ -30,3 +30,18 @@ label:hover{
     background-color: lightblue;
     border-radius: 10px;
 }
+section#osa2 {
+    border: 1pt solid #000;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 30%;
+}
+
+section#yld{
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+}
+img#tempilt{
+    scale: 50%;
+}
