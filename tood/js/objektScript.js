@@ -32,7 +32,8 @@ let raamatukogu = {
     },
 
 }
-raamatukogu.kuvaAutorid();
+
+console.log(raamatukogu);
 
 document.getElementById("vastus1").innerHTML = raamatukogu.raamatud[0].pealkiri;
 document.getElementById("vastus2").innerHTML = raamatukogu.koguArv();
