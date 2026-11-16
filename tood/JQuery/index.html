@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery kasutamine</title>
+    <link rel="stylesheet" href="queryStyle.css">
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+    <script>
+
+        function tekstPunaseks() {
+            $('#tekstikast').css('color', 'red');
+        }
+        function tekstmustaks() {
+            $('#tekstikast').css('color', 'black');
+        }
+        function koordLugemine(event, ui){
+            let koht=ui.offset;
+            $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
+        }
+        function leheStart() {
+            $('#tekstikast').mouseenter(tekstPunaseks);
+            $('#tekstikast').mouseleave(tekstmustaks);
+            $('#tekstikast').draggable();
+            $('#tekstikast').bind("drag", koordLugemine);
+            $('#pilt').draggable();
+            $('#tekstikast').bind("drag", koordLugemine);
+        }
+        </script>
+    <script>
+        $(document).ready(function () {})
+        $('#paremale').click(function () {
+            $('#tekstikast').animate({left: '200px'}, 1000);
+            $(this).hide();
+            $('#vasakule').show();
+        });
+        $('#vasakule').click(function () {
+            $('#tekstikast').animate({left: '0px'}, 1000);
+            $(this).hide();
+            $('#paremale').show();
+        });
+
+    </script>
+</head>
+<body onload="leheStart()">
+<header>
+    <h1>Jquery kasutamine</h1>
+</header>
+<main>
+    <section>
+        <h2>jQuery CDN</h2>
+        <div id="tekstikast">
+            jQuery - see on raamistik
+            <br>
+            CDN - raamistiku allalaadimiseviis välisserverist
+            <br>
+            ametlik CDN asub https://releases.jquery.com/
+        </div>
+        <input type="button" value="paremale" id="paremale">
+        <input type="button" value="vasakule" id="vasakule">
+        <input type="button" value="peida teksti"
+               onclick="$('#tekstikast, h2').hide(2000)">
+        <input type="button" value="kuva teksti"
+               onclick="$('#tekstikast, h2').show(2000, alert('Kohe kuvab tekst'))">
+    </section>
+    <div id="koordinaadid"></div>
+    <img src="https://imgs.search.brave.com/S5lxT9DprWXyhzYzfv4it5NIYT2k2CHNb7Sd2_ZGm54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvcGlr/YWNodS10cmFuc3Bh/cmVudC1jdXRvdXQt/cG5nLXhnbzQtM2Z2/anNhbHRxeG12NGhk/dy5wbmc" id="pilt">
+</main>
+
+</body>
+</html>

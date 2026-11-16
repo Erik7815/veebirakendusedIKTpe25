@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+            integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+            crossorigin="anonymous"></script>
+    <script>
+
+        function tekstPunaseks() {
+            $('#contact ').css('color', 'blue');
+        }
+        function tekstmustaks() {
+            $('contact').css('color', 'black');
+        }
+
+        function leheStart() {
+            $('#osa3').onmouseenter(tekstPunaseks);
+            $('#osa3').mouseleave(tekstmustaks);
+            $('#osa3').draggable();
+        }
+    </script>
 </head>
 <body>
 <!--veebilehe sisu mis kasutaja näeb-->
@@ -30,6 +53,7 @@
 </nav>
 <!--sisu-->
 <main>
+    <div id="contact">
     <section id="osa3">
 <h2>Kontakt Info</h2>
         <p>Mina olen IKT õpilane teine kursus</p>
@@ -45,6 +69,7 @@
             <img src="Nimetu.png" alt="see on kuldkala">
         </div>
     </section>
+    </div>
 
 
 </main>
