@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <title>Muusika</title>
   <script src="../js/muusikaScript.js"></script>
+  <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script>
+  function tekstPunaseks() {
+  $('#vastus1').css('color', 'red');
+  }
+  function koordLugemine(event, ui){
+  let koht=ui.offset;
+  $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
+  }
+  function leheStart() {
+    $('#vastus1, vastus').onchange(tekstPunaseks);
+  }
+  </script>
+
   <link rel="stylesheet" href="muusikastyle.css">
 </head>
-<body>
+<body onload="leheStart()">
 <h1>Muusika küsitlus</h1>
-<table border="1">
+<table border="1" id="tekstkast">
   <tr>
     <td>
        <strong>Küsimused</strong>
@@ -20,7 +37,6 @@
 <tr>
   <td>
     Milliseid muusikuid/ansambleid sa tead?
-
   </td>
   <td>
     <fieldset>
@@ -135,5 +151,19 @@
   </tr>
 
 </table>
+<input type="button" value="<===" id="vasakule" style="display:none"
+       onclick="$('#tekstkast, h2').animate({left: '0px'}, 1000);
+                      $(this).hide();
+          $('#paremale').show();">
+<input type="button" value="===>" id="paremale"
+       onclick="$('#tekstkast, h2').animate({left: '500px'}, 1000);
+            $(this).hide();
+            $('#vasakule').show();">
+
+<input type="button" value="peida teksti"
+       onclick="$('#tekstkast, h2').hide(2000)">
+<input type="button" value="kuva teksti"
+       onclick="$('#tekstkast, h2').show(2000, alert('Kohe kuvab tekst'))">
+
 </body>
 </html>
