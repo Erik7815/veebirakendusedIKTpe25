@@ -28,9 +28,7 @@ let raamatukogu = {
         return raamatukogu.raamatud.filter(raamat => raamat.aasta > 2000).length;
     },
 
-    //Autorite kuvamine
-    kuvaAutorid() {
-        raamatukogu.raamatud.forEach(raamat => console.log(raamat.autor));
+
     }
 };
 
@@ -50,11 +48,11 @@ console.log(raamatukogu.koguArv());
 //Pärast 2000. aastat ilmunud raamatute arv
 console.log(raamatukogu.parast2000());
 
-//Autorite kuvamine
-raamatukogu.kuvaAutorid();
 
-document.getElementById("vastus1").innerHTML = raamatukogu.raamatud[0].pealkiri;
+
+let vastus1 = document.getElementById("vastus1");
 document.getElementById("vastus2").innerHTML = raamatukogu.koguArv();
 document.getElementById("vastus3").innerHTML = raamatukogu.parast2000();
 document.getElementById("vastus4").innerHTML = raamatukogu.raamatud[0].autor;
 document.getElementById("vastus5").innerHTML = raamatukogu.raamatud[0].aasta;
+vastus1.innerHTML =  raamatukogu.raamatud[0].pealkiri;
