@@ -15,7 +15,7 @@ let raamatukogu = {
 
     //Uue raamatu lisamine
     lisaRaamat(uusRaamat) {
-        raamatukogu.raamatud.push(uusRaamat);
+        raamatukogu.raamatud.push({pealkiri: 'Sipsik', autor: 'Eno Raud', aasta: 1962});
     },
 
     //Raamatute koguarv
@@ -35,12 +35,6 @@ let raamatukogu = {
 //Kõikide raamatute kuvamine
 raamatukogu.kuvaRaamatud();
 
-//Uue raamatu lisamine
-raamatukogu.lisaRaamat({
-    pealkiri: "Sipsik",
-    autor: "Eno Raud",
-    aasta: 1962
-});
 
 //Raamatute koguarv
 console.log(raamatukogu.koguArv());
