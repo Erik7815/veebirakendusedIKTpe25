@@ -9,16 +9,21 @@
           integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
           crossorigin="anonymous"></script>
   <script>
-  function tekstPunaseks() {
-  $('#vastus1').css('color', 'red');
-  }
-  function koordLugemine(event, ui){
-  let koht=ui.offset;
-  $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
-  }
-  function leheStart() {
-    $('#vastus1, vastus').onchange(tekstPunaseks);
-  }
+    $(function(){
+      $('.viga').hide();
+      $('#submit').click(function(event){
+        var data=$('#muusikud').val();
+        var len=data.length;
+
+        if(len < 1){
+          $('.viga').show();
+          event.preventDefault();
+        } else {
+          $('.viga').hide();
+        }
+      });
+    });
+
   </script>
 
   <link rel="stylesheet" href="muusikastyle.css">
@@ -39,8 +44,9 @@
     Milliseid muusikuid/ansambleid sa tead?
   </td>
   <td>
-    <fieldset>
+    <fieldset id="submit">
 
+<div id="muusikud">
     <input type="checkbox" id="muusik1" name="muusik" value="Queen" onchange="muusikuvalik()">
     <label for="muusik1">Queen</label>
       <br>
@@ -49,11 +55,12 @@
       <br>
       <input type="checkbox" id="muusik3" name="muusik" value="the beatles" onchange="muusikuvalik()">
       <label for="muusik3">the beatles</label>
-
+      </div>
     </fieldset>
   </td>
   <td>
     <div id="vastus1"></div>
+    <span class="viga">Seda välja ei tohi jätta tühjaks</span>
   </td>
 </tr>
   <tr>

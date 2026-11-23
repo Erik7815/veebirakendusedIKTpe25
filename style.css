@@ -64,9 +64,7 @@ nav{
     padding: 5%;
     margin-bottom: 20px;
 }
-ul li:hover{
-    background-color: goldenrod;
-}
+
 nav ul li a:hover{
     background-color: cornflowerblue;
 }
@@ -94,4 +92,8 @@ section#osa5 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
+.hover {
+    background: #cc3333;
+    font-weight: 700;
 }

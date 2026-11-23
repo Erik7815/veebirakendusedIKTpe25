@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika</title>
+  <script src="../js/muusikaScript.js"></script>
+  <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+    $(function(){
+      $('.viga').hide();
+      $('#submit').click(function(event){
+        var data=$('muusik1').val();
+        var len=data.length;
+
+        if(len < 1){
+          $('.viga').show();
+          event.preventDefault();
+        } else {
+          $('.viga').hide();
+        }
+      });
+    });
+
+  </script>
+
+  <link rel="stylesheet" href="muusikastyle.css">
+</head>
+<body onload="leheStart()">
+<h1>Muusika küsitlus</h1>
+<table border="1" id="tekstkast">
+  <tr>
+    <td>
+       <strong>Küsimused</strong>
+    </td>
+    <td>
+     <strong>Vastused</strong>
+    </td>
+  </tr>
+<tr>
+  <td>
+    Milliseid muusikuid/ansambleid sa tead?
+  </td>
+  <td>
+    <fieldset id="submit">
+    <input type="checkbox" id="muusik1" name="muusik" value="Queen" onchange="muusikuvalik()">
+    <label for="muusik1">Queen</label>
+      <br>
+      <input type="checkbox" id="muusik2" name="muusik" value="ACDC" onchange="muusikuvalik()">
+      <label for="muusik2">ACDC</label>
+      <br>
+      <input type="checkbox" id="muusik3" name="muusik" value="the beatles" onchange="muusikuvalik()">
+      <label for="muusik3">the beatles</label>
+
+    </fieldset>
+  </td>
+  <td>
+    <div id="vastus1"></div>
+    <br>
+    <span class="viga">Seda välja ei tohi jätta tühjaks</span>
+  </td>
+</tr>
+  <tr>
+    <td>
+      <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+    </td>
+    <td>
+      <input type="text" id="arvamus" oninput="muusikaarvvamus()">
+    </td>
+    <td>
+      <div id="vastus2"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
+
+    </td>
+    <td>
+      <input type="number" min="0" max="24" step="1" value="6" id="tund" oninput="muusikanumber()">
+    </td>
+    <td>
+      <div id="vastus3"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Kas sa kuulad raadiot?
+    </td>
+    <td>
+      <br>
+      <input type="radio" name="jahe" value="jah" id="jah" onclick="radiokuulamine()">
+      <label for="jah">Jah</label>
+      <br>
+      <input type="radio" name="jahe" value="ei" id="ei" onclick="radiokuulamine()">
+      <label for="ei">Ei</label>
+    </td>
+    <td>
+      <div id="vastus4"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Milliseid raadiojaamu oskad nimetada?
+      </td>
+    <td>
+      <input type="text" id="jaam" oninput="raadio()">
+    </td>
+    <td>
+      <div id="vastus5"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Millist muusikat sa kõige rohkem kuulad?
+    </td>
+    <td>
+      <input type="radio" id="muusika1" name="muusikastiil" value="Rock" onclick="stiilivalik()">
+      <label for="muusika1">Rock</label>
+    <br>
+      <input type="radio" id="muusika2" name="muusikastiil" value="Pop" onclick="stiilivalik()">
+      <label for="muusika2">Pop</label>
+      <br>
+      <input type="radio" id="muusika3" name="muusikastiil" value="Country" onclick="stiilivalik()">
+      <label for="muusika3">Country</label>
+      <br>
+      <input type="radio" id="muusika4" name="muusikastiil" value="Metal" onclick="stiilivalik()">
+      <label for="muusika4">Metal</label>
+      <br>
+      <input type="radio" id="muusika5" name="muusikastiil" value="Rap" onclick="stiilivalik()">
+      <label for="muusika5">Rap</label>
+      <br>
+      <input type="radio" id="muusika6" name="muusikastiil" value="Reggae" onclick="stiilivalik()">
+      <label for="muusika6">Reggae</label>
+    </td>
+    <td>
+      <div id="vastus6"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="Saada" onclick="SAADA()">
+    </td>
+    <td>
+      <strong>Kokkuvõte:</strong>
+    </td>
+    <td>
+      <div id="vastus7"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="reset" value="Puhasta" onclick="puhasta()">
+    </td>
+  </tr>
+
+</table>
+<input type="button" value="<===" id="vasakule" style="display:none"
+       onclick="$('#tekstkast, h2').animate({left: '0px'}, 1000);
+                      $(this).hide();
+          $('#paremale').show();">
+<input type="button" value="===>" id="paremale"
+       onclick="$('#tekstkast, h2').animate({left: '500px'}, 1000);
+            $(this).hide();
+            $('#vasakule').show();">
+
+<input type="button" value="peida teksti"
+       onclick="$('#tekstkast, h2').hide(2000)">
+<input type="button" value="kuva teksti"
+       onclick="$('#tekstkast, h2').show(2000, alert('Kohe kuvab tekst'))">
+
+</body>
+</html>
