@@ -3,18 +3,14 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tehtud tööd</title>
     <link rel="stylesheet" href="style.css">
     <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous">
     </script>
-    <script type="text/javascript">
-        $(function(){
-            $('ul').addClass('ul_kujundus');
-            $('ul li ul li').addClass('li_kujundus');
-        });
+
     </script>
     <script type="text/javascript">
         $(function(){
@@ -28,7 +24,6 @@
     </script>
 
 
-    </style>
 </head>
 <body>
 <!--veebilehe sisu mis kasutaja näeb-->
@@ -38,13 +33,19 @@
 </h1>
 </header>
 <nav>
-    <ul id="breadcrumb">
+    <ul id="menyy">
        <li> <a href="index.html"> Avaleht</a></li>
         <li>
             <a href="kontakt.html">Kontakt </a>
         </li>
         <li>
             <a href="tehtud.html">Tehtud tööd</a>
+            <ul id="bread">
+            <li><a href="tood/tabelid.html">Tabelid</a></li>
+            <li><a href=tood/vormid/ankeet.html>Ankeet</a></li>
+            <li><a href="tood/maparea/map.html">Map area pildid</a></li>
+            <li><a href="tood/paberiulesanne.html">Paberi ülessanne</a></li>
+        </ul>
         </li>
         <li>
             <a href="lingid.html">Kasulikud lingid</a>
@@ -55,17 +56,7 @@
 </nav>
 <!--sisu-->
 <main>
-    <h2>Breadcrumb menüü</h2>
-    <ul id="menyy">
-        <li><a href="#">Avaleht</a>
-            <ul>
-                <li><a href="tood/tabelid.html">Tabelid</a></li>
-                <li><a href=tood/vormid/ankeet.html>Ankeet</a></li>
-                <li><a href="tood/maparea/map.html">Map area pildid</a></li>
-                <li><a href="tood/paberiulesanne.html">Paberi ülessanne</a></li>
-            </ul>
-        </li>
-    </ul>
+
     <section id="osa4">
 <h2>Tunnis tehtud tööd</h2>
 

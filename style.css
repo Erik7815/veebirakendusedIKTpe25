@@ -97,3 +97,14 @@ section#osa5 {
     background: #cc3333;
     font-weight: 700;
 }
+li {
+    display: inline;
+}
+ul#bread {
+    width: 200px;
+}
+#vihje {
+    position:absolute;
+    color: firebrick;
+    background-color:cornflowerblue;
+}
